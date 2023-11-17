@@ -2,11 +2,17 @@
 
 ## Overview
 
-ChatGPT Actions is a custom ChatGPT bot integrated with Google and YouTube search capabilities.
+ChatGPT Actions is a custom ChatGPT Actions integrated with Google and YouTube search capabilities.
+
+## Features
+
+- Google Search Integration
+- YouTube Search Integration
 
 ## Suggested Project Structure
 
-your-chatgpt-bot-project/
+```graphql
+chatgpt_actions/
 │
 ├── .gitignore          # List of files and directories ignored by git
 ├── README.md           # Project description and instructions
@@ -19,22 +25,19 @@ your-chatgpt-bot-project/
 ├── config/             # Configuration files (not committed)
 │   └── config.example.json  # Example config file template
 │
-├── src/                # Source code of the ChatGPT bot
-│   ├── main.py         # Main application script
-│   └── other_modules/  # Other necessary modules and scripts
-│
 ├── requirements.txt    # Python dependencies
 └── tests/              # Unit and integration tests
     ├── test_google_search.py
     ├── test_youtube_search.py
     └── other_tests.py
+```
 
 ## Setup
 
 1. Clone the repository
 
 ```sh
-git clone [repository URL]
+git clone https://github.com/ljosephpratt/chatgpt_actions
 ```
 
 1. Install dependencies:
@@ -50,18 +53,25 @@ export GOOGLE_API_KEY='your_google_api_key'
 export YOUTUBE_API_KEY='your_youtube_api_key'
 ```
 
-## Running the Bot
+## Unit and Integration Testing
 
-To run the bot, execute:
+### Run All Tests
 
-```python
-python src/main.py
+```sh
+ python -m unittest discover -s tests -p "test_*.py"
 ```
 
-## Features
+### Run Unit Tests
 
-- Google Search Integration
-- YouTube Search Integration
+```sh
+ python -m unittest discover -s tests -p "test_unit_*.py"
+```
+
+### Run Integration Tests
+
+```sh
+ python -m unittest discover -s tests -p "test_integration_*.py"
+```
 
 ## License
 

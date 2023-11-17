@@ -6,7 +6,6 @@ class TestGoogleSearch(unittest.TestCase):
 
     @patch('requests.get')
     def test_google_search(self, mock_get):
-        # Mock response data
         mock_response = {
             "items": [
                 {"title": "Test Title 1", "link": "http://example.com/1"},
